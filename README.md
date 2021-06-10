@@ -1,0 +1,2 @@
+## Known Bugs
+Delete functionality for locations is not working. I am able to delete via postman, and I have confirmed that I am passing through the id on the client correctly. The client's delete request url also looks good. Something's wrong, though!
