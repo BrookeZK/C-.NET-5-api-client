@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>New Location:</h1>
+
+<form action="/locations" method="post">
+  <label for="name">Location's Name</label>
+  <input id="name" name="name" type="text">
+  <label for="weather">Location's Weather</label>
+  <input id="weather" name="weather" type="text">
+  <label for="terrainType">Location's Terrain Type</label>
+  <input id="terrainType" name="terrainType" type="text">
+  <button type="submit">Go!</button>
+</form>
+
+<h1>All Locations:</h1>
+
+<ol>
+@foreach (Location location in Model)
+{
+    <ul>
+        <li>ID: @location.LocationId</li>
+        <li>Name: @location.Name</li>
+        <li>Age: @location.Weather</li>
+        <li>Species: @location.TerrainType</li>
+    </ul>
+    <a href="/Locations/Details/@(location.LocationId)"><p>View Details</p></a>
+    <br>
+}
+</ol>

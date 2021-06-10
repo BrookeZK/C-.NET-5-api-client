@@ -1,0 +1,12 @@
+<h1>Edit Info:</h1>
+<form action="/Locations/Details/@(Model.LocationId)" method="post">
+  <label for="name">Location's Name</label>
+  <input id="name" name="name" type="text" value="@(Model.Name)">
+  <label for="weather">Location's Weather</label>
+  <input id="weather" name="weather" type="text" value="@(Model.Weather)">
+  <label for="terrainType">Location's Terrain Type</label>
+  <input id="terrainType" name="terrainType" type="text" value="@(Model.TerrainType)">
+  <button type="submit">Go!</button>
+</form>
+
+<a href="/Locations/Details/@(Model.LocationId)"><p>Return to Details</p></a>
